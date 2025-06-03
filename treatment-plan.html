@@ -20,29 +20,26 @@
 
     <!-- File CSS của nhà cung cấp -->
     <link
-      href="../assets/vendor/bootstrap/css/bootstrap.min.css"
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <link
-      href="../assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
       rel="stylesheet"
     />
-    <link href="../assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
     <link
-      href="../assets/vendor/fontawesome-free/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="../assets/vendor/glightbox/css/glightbox.min.css"
+      href="assets/vendor/fontawesome-free/css/all.min.css"
       rel="stylesheet"
     />
     <link
-      href="../assets/vendor/swiper/swiper-bundle.min.css"
+      href="assets/vendor/glightbox/css/glightbox.min.css"
       rel="stylesheet"
     />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
     <!-- File CSS chính -->
-    <link href="../assets/css/main.css" rel="stylesheet" />
+    <link href="assets/css/main.css" rel="stylesheet" />
   </head>
   <body class="index-page">
     <header id="header" class="header sticky-top">
@@ -51,10 +48,10 @@
           class="container d-flex justify-content-center justify-content-md-between"
         >
           <div class="d-none d-md-flex align-items-center">
-            <i class="bi bi-clock me-1"></i> Thứ 2 - Thứ 7, 8h đến 22h
+            <i class="bi bi-clock me-1"></i> Thứ Hai - Thứ Bảy, 8AM - 10PM
           </div>
           <div class="d-flex align-items-center">
-            <i class="bi bi-phone me-1"></i> Gọi điện: 089.888.8668
+            <i class="bi bi-phone me-1"></i> Gọi điện: 0899.888.8668
           </div>
         </div>
       </div>
@@ -89,15 +86,15 @@
     <main class="main">
       <section class="section">
         <div class="container">
-          <h2 class="mb-4">Lịch hẹn</h2>
+          <h2 class="mb-4">Kế hoạch điều trị</h2>
           <div class="row mb-3">
             <div class="col-12 col-md-6 mb-2 mb-md-0">
               <button
                 class="btn btn-success w-100 w-md-auto"
                 data-bs-toggle="modal"
-                data-bs-target="#addAppointmentModal"
+                data-bs-target="#addPlanModal"
               >
-                <i class="bi bi-plus-circle"></i> Thêm lịch hẹn
+                <i class="bi bi-plus-circle"></i> Thêm kế hoạch
               </button>
             </div>
             <div class="col-12 col-md-6">
@@ -105,7 +102,7 @@
                 <input
                   class="form-control"
                   type="search"
-                  placeholder="Tìm kiếm lịch hẹn..."
+                  placeholder="Tìm kiếm kế hoạch..."
                   aria-label="Tìm kiếm"
                   id="searchInput"
                 />
@@ -124,9 +121,11 @@
               <thead>
                 <tr>
                   <th>Bệnh nhân</th>
-                  <th>Bác sĩ</th>
-                  <th>Ngày</th>
-                  <th>Giờ</th>
+                  <th>Chẩn đoán</th>
+                  <th>Phác đồ điều trị</th>
+                  <th>Ngày bắt đầu</th>
+                  <th>Ngày kết thúc</th>
+                  <th>Bác sĩ phụ trách</th>
                   <th>Trạng thái</th>
                   <th>Hành động</th>
                 </tr>
@@ -134,77 +133,78 @@
               <tbody>
                 <tr>
                   <td>Nguyễn Thị Huyền</td>
+                  <td>Viêm phổi</td>
+                  <td>Kháng sinh, nghỉ ngơi, theo dõi nhiệt độ</td>
+                  <td>01/06/2025</td>
+                  <td>10/06/2025</td>
                   <td>BS. Lê Văn Cường</td>
-                  <td>05/06/2025</td>
-                  <td>09:00</td>
-                  <td>Đã xác nhận</td>
+                  <td>Đang điều trị</td>
                   <td>
-                    <button class="btn btn-warning btn-sm me-1">
-                      <i class="bi bi-pencil-square"></i> Sửa
-                    </button>
-                    <button class="btn btn-danger btn-sm">
-                      <i class="bi bi-trash"></i> Xoá
-                    </button>
+                    <div class="action-buttons">
+                      <button class="btn btn-warning btn-sm me-1">
+                        <i class="bi bi-pencil-square"></i> Sửa
+                      </button>
+                      <button class="btn btn-danger btn-sm">
+                        <i class="bi bi-trash"></i> Xoá
+                      </button>
+                    </div>
                   </td>
                 </tr>
                 <tr>
                   <td>Trần Minh Tuấn</td>
+                  <td>Tiểu đường tuýp 2</td>
+                  <td>Insulin, chế độ ăn kiêng, tập thể dục</td>
+                  <td>15/05/2025</td>
+                  <td>15/11/2025</td>
                   <td>BS. Nguyễn Thị Hạnh</td>
-                  <td>06/06/2025</td>
-                  <td>14:00</td>
-                  <td>Chờ xác nhận</td>
+                  <td>Đang điều trị</td>
                   <td>
-                    <button class="btn btn-warning btn-sm me-1">
-                      <i class="bi bi-pencil-square"></i> Sửa
-                    </button>
-                    <button class="btn btn-danger btn-sm">
-                      <i class="bi bi-trash"></i> Xoá
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Phạm Quốc Toàn</td>
-                  <td>BS. Trần Văn Hùng</td>
-                  <td>07/06/2025</td>
-                  <td>10:30</td>
-                  <td>Đã xác nhận</td>
-                  <td>
-                    <button class="btn btn-warning btn-sm me-1">
-                      <i class="bi bi-pencil-square"></i> Sửa
-                    </button>
-                    <button class="btn btn-danger btn-sm">
-                      <i class="bi bi-trash"></i> Xoá
-                    </button>
+                    <div class="action-buttons">
+                      <button class="btn btn-warning btn-sm me-1">
+                        <i class="bi bi-pencil-square"></i> Sửa
+                      </button>
+                      <button class="btn btn-danger btn-sm">
+                        <i class="bi bi-trash"></i> Xoá
+                      </button>
+                    </div>
                   </td>
                 </tr>
                 <tr>
                   <td>Lê Thị Mai</td>
-                  <td>BS. Vũ Thị Lan</td>
-                  <td>08/06/2025</td>
-                  <td>08:00</td>
-                  <td>Đã huỷ</td>
+                  <td>Viêm gan B</td>
+                  <td>Thuốc kháng virus, theo dõi chức năng gan</td>
+                  <td>01/04/2025</td>
+                  <td>01/10/2025</td>
+                  <td>BS. Trần Văn Hùng</td>
+                  <td>Đã hoàn thành</td>
                   <td>
-                    <button class="btn btn-warning btn-sm me-1">
-                      <i class="bi bi-pencil-square"></i> Sửa
-                    </button>
-                    <button class="btn btn-danger btn-sm">
-                      <i class="bi bi-trash"></i> Xoá
-                    </button>
+                    <div class="action-buttons">
+                      <button class="btn btn-warning btn-sm me-1">
+                        <i class="bi bi-pencil-square"></i> Sửa
+                      </button>
+                      <button class="btn btn-danger btn-sm">
+                        <i class="bi bi-trash"></i> Xoá
+                      </button>
+                    </div>
                   </td>
                 </tr>
                 <tr>
-                  <td>Đỗ Văn Bình</td>
-                  <td>BS. Nguyễn Văn Sơn</td>
-                  <td>09/06/2025</td>
-                  <td>15:00</td>
-                  <td>Chờ xác nhận</td>
+                  <td>Phạm Quốc Toàn</td>
+                  <td>Tăng huyết áp</td>
+                  <td>Thuốc hạ áp, kiểm soát chế độ ăn, tái khám định kỳ</td>
+                  <td>10/03/2025</td>
+                  <td>10/09/2025</td>
+                  <td>BS. Vũ Thị Lan</td>
+                  <td>Đang điều trị</td>
                   <td>
-                    <button class="btn btn-warning btn-sm me-1">
-                      <i class="bi bi-pencil-square"></i> Sửa
-                    </button>
-                    <button class="btn btn-danger btn-sm">
-                      <i class="bi bi-trash"></i> Xoá
-                    </button>
+                    <div class="action-buttons">
+                      <button class="btn btn-warning btn-sm me-1">
+                        <i class="bi bi-pencil-square"></i> Sửa
+                      </button>
+                      <button class="btn btn-danger btn-sm">
+                        <i class="bi bi-trash"></i> Xoá
+                      </button>
+                    </div>
                   </td>
                 </tr>
               </tbody>
@@ -214,20 +214,20 @@
       </section>
     </main>
 
-    <!-- Modal Thêm lịch hẹn -->
+    <!-- Modal Thêm kế hoạch điều trị -->
     <div
       class="modal fade"
-      id="addAppointmentModal"
+      id="addPlanModal"
       tabindex="-1"
-      aria-labelledby="addAppointmentModalLabel"
+      aria-labelledby="addPlanModalLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog">
         <div class="modal-content">
           <form>
             <div class="modal-header">
-              <h5 class="modal-title" id="addAppointmentModalLabel">
-                Thêm lịch hẹn
+              <h5 class="modal-title" id="addPlanModalLabel">
+                Thêm kế hoạch điều trị
               </h5>
               <button
                 type="button"
@@ -242,22 +242,30 @@
                 <input type="text" class="form-control" required />
               </div>
               <div class="mb-3">
-                <label class="form-label">Bác sĩ</label>
+                <label class="form-label">Chẩn đoán</label>
                 <input type="text" class="form-control" required />
               </div>
               <div class="mb-3">
-                <label class="form-label">Ngày</label>
+                <label class="form-label">Phác đồ điều trị</label>
+                <textarea class="form-control" rows="3" required></textarea>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Ngày bắt đầu</label>
                 <input type="date" class="form-control" required />
               </div>
               <div class="mb-3">
-                <label class="form-label">Giờ</label>
-                <input type="time" class="form-control" required />
+                <label class="form-label">Ngày kết thúc</label>
+                <input type="date" class="form-control" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Bác sĩ phụ trách</label>
+                <input type="text" class="form-control" required />
               </div>
               <div class="mb-3">
                 <label class="form-label">Trạng thái</label>
                 <select class="form-select" required>
-                  <option value="Đã xác nhận">Đã xác nhận</option>
-                  <option value="Chờ xác nhận">Chờ xác nhận</option>
+                  <option value="Đang điều trị">Đang điều trị</option>
+                  <option value="Đã hoàn thành">Đã hoàn thành</option>
                   <option value="Đã huỷ">Đã huỷ</option>
                 </select>
               </div>
