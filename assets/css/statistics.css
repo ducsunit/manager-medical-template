@@ -1,0 +1,170 @@
+/* Tổng thể */
+body,
+.main {
+  background: #f5f6fa !important;
+}
+
+/* Box tổng quan */
+.card.shadow-sm {
+  border-radius: 16px;
+  box-shadow: 0 2px 8px 0 rgba(60, 72, 100, 0.04);
+  border: none;
+  background: #fff;
+  transition: box-shadow 0.2s;
+}
+.card.shadow-sm:hover {
+  box-shadow: 0 4px 16px 0 rgba(60, 72, 100, 0.08);
+}
+
+/* Icon trong box */
+.card .rounded-circle {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Box tổng quan: căn giữa nội dung */
+.card-body.d-flex.align-items-center.justify-content-between > div:first-child {
+  min-width: 0;
+}
+
+/* Box tổng quan: font số */
+.fs-4.fw-bold {
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+}
+
+/* Box tổng quan: icon */
+.card .fs-3 {
+  font-size: 2rem !important;
+}
+
+/* Dropdown chọn thống kê */
+#statType {
+  min-width: 220px;
+  border-radius: 8px;
+  border: 1px solid #e3e6ef;
+  background: #f8f9fa;
+  font-size: 1rem;
+}
+
+/* Card biểu đồ */
+.card-header {
+  background: #fff !important;
+  border-bottom: 1px solid #f0f1f6;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 1rem 1.25rem;
+}
+.card-body {
+  background: #fff;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+}
+
+/* Biểu đồ tròn tỷ lệ */
+#circleChart {
+  margin-right: -60px;
+}
+#circlePercent {
+  left: 65%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #0d6efd;
+}
+
+/* Box nhỏ bên phải */
+.card.text-center .fw-bold {
+  font-size: 1.1rem !important;
+}
+.card.text-center .text-muted {
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .col-lg-8,
+  .col-lg-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .card-header,
+  .card-body {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  #statType {
+    width: 100%;
+  }
+  /* Responsive cho card tỷ lệ hoàn thành mục tiêu (biểu đồ tròn) */
+  .card
+    .d-flex.justify-content-center.align-items-center[style*="height: 140px"] {
+    height: 110px !important;
+  }
+  #circleChart {
+    width: 90px !important;
+    height: 90px !important;
+  }
+  #circlePercent {
+    font-size: 2rem !important;
+    margin-left: -45px !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .card
+    .d-flex.justify-content-center.align-items-center[style*="height: 140px"] {
+    height: 80px !important;
+  }
+  #circleChart {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  #circlePercent {
+    font-size: 1.2rem !important;
+    margin-left: -30px !important;
+  }
+  .card-body.text-center .mt-2 {
+    font-size: 1rem !important;
+  }
+}
+.card .d-flex.justify-content-center.align-items-center {
+  position: relative;
+  justify-content: center !important;
+  align-items: center !important;
+}
+#circleChart {
+  display: block;
+  margin: 0 auto;
+}
+#circlePercent {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #0d6efd;
+  font-size: 2.5rem;
+  font-weight: bold;
+  pointer-events: none;
+  margin: 0 !important; /* Xoá margin-left cũ nếu có */
+}
+
+/* Responsive cho biểu đồ tròn */
+@media (max-width: 991.98px) {
+  #circleChart {
+    width: 90px !important;
+    height: 90px !important;
+  }
+  #circlePercent {
+    font-size: 2rem !important;
+  }
+}
+@media (max-width: 575.98px) {
+  #circleChart {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  #circlePercent {
+    font-size: 1.2rem !important;
+  }
+}
